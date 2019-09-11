@@ -1,6 +1,7 @@
 class Piece
+  attr_reader :color
   def initialize
-    @place_holder = "."  
+    @color = "black"  
   end
 
   def moves
