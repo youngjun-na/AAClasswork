@@ -1,21 +1,21 @@
 require "singleton"
-require_relative "../Piece"
-
-class Nullpiece < Piece
+class Nullpiece 
   include Singleton
   def initialize
-    super
+    super 
+
+  end
+
+  def color
+    :X
   end
 
   def moves
-
+    []
   end
 
-  def symbols
-
+  def inspect
+    "   "
   end
 end
 
-b = Nullpiece.instance
-
-p b.color

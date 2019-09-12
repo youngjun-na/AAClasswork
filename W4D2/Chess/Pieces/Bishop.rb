@@ -1,15 +1,21 @@
 require_relative "../Piece"
+require_relative "../Slide"
 
 class Bishop < Piece
-  def initialize
+  include Slideable
+  def initialize(color, board, pos)
     super
   end
 
-  def moves
+  def inspect
+    " ♝ "
+  end
+  def valid_moves
 
   end
+  protected
 
-  def symbols
-
+  def move_dirs
+    diagonal_dirs
   end
 end
