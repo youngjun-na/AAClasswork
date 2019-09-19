@@ -75,7 +75,7 @@ def films_and_stars_from_sixty_two
   # List the title and leading star of every 1962 film.
   execute(<<-SQL)
     SELECT
-      movies.title, actors.name, 
+      movies.title, actors.name 
     FROM
       movies
     JOIN
@@ -189,6 +189,14 @@ def colleagues_of_garfunkel
   # List all the people who have played alongside 'Art Garfunkel'.
   execute(<<-SQL)
     SELECT
-       
+      actors2.name
+    FROM
+      actors as actors1
+    JOIN
+      castings ON actors1.id = castings.actor_id
+    JOIN
+      actors as actors2 ON castings.actor_id = actors2.id
+    WHERE
+      actors1.name = 'Art Garfunkel' AND actors2.name != 'Art Garfunkel'
   SQL
 end
