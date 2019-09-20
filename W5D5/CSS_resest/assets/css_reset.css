@@ -1,0 +1,29 @@
+html, body, section, article, h1, h2, p, head, footer, section, figure {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: inherit;
+  font: inherit;
+  fo nt-size: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+li {
+  list-style: inherit;
+  list-style-position: inherit;
+
+}
+
+body {
+  font-family: serif;
+  line-height: 1.5;
+  width: 500px;
+  
+  color: red;
+}
+
+img {
+  width: inherit;
+}
