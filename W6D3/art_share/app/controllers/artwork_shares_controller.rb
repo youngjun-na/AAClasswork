@@ -14,6 +14,15 @@ class ArtworkSharesController < ApplicationController
     render json: share
   end
 
+  def fave
+    shares = ArtworkShare.find(params[:id])
+    if shares.favorite == false
+      shares.update_column(:favorite, true)
+    else
+      shares.update_column(:favorite, false)
+    end
+      render json: shares
+  end
 
   private
   def share_params 

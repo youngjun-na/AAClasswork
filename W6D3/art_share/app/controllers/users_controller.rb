@@ -16,8 +16,13 @@ class UsersController < ApplicationController
   end
 
   def index 
-    users = User.all 
-    render json: users 
+    if params.has_key?(:username)
+      user = User.where('username = ?', params[:username])
+      render json: user
+    else
+      users = User.all 
+      render json: users 
+    end
   end
 
   def show 

@@ -3,8 +3,8 @@ class ArtworksController < ApplicationController
     user = User.find(params[:user_id])
     owned_artworks = user.artworks
     shared_artworks = user.shared_artworks
-  
-    render json: shared_artworks
+    
+    render json: {:shared_artworks => shared_artworks, :owned_artworks => owned_artworks}
   end
 
   def show
@@ -36,8 +36,21 @@ class ArtworksController < ApplicationController
     end
   end
 
+  def fave
+    artwork = Artwork.find(params[:id])
+    if artwork.favorite == false
+      artwork.update_column(:favorite, true)
+      # artwork.favorite = true
+      # artwork.save
+    else
+      artwork.update_column(:favorite, false)
+      # artwork.favorite = false
+      # artwork.save
+    end
+      render json: artwork
+  end
   private
   def artwork_params 
-    params.require(:artwork).permit(:title, :image_url, :artist_id)
+    params.require(:artwork).permit(:title, :image_url, :artist_id, :favorite)
   end
 end

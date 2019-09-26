@@ -13,6 +13,8 @@
 class Artwork < ApplicationRecord
   validates :artist_id, uniqueness: {scope: :title}
 
+  has_many :likes, as: :likeable, dependent: :destroy
+
   belongs_to :artist,
     foreign_key: :artist_id,
     class_name: :User
@@ -24,4 +26,21 @@ class Artwork < ApplicationRecord
   has_many :shared_viewers,
     through: :artwork_shares,
     source: :viewer
+
+  has_many :comments,
+    foreign_key: :artwork_id,
+    class_name: :Comment, 
+    dependent: :destroy
+
+  has_many :likers,
+    through: :likes,
+    source: :user
+
+  has_many :collection_artworks,
+    foreign_key: :artwork_id,
+    class_name: :CollectionArtwork
+
+  def favorite?
+    self.where('favorited = true')
+  end
 end
