@@ -1,0 +1,11 @@
+<h1>Cat Directory! </h3>  
+<a href="<%= new_cat_url %>">Generate a Cat</a>
+
+<ul>
+  <%@cats.each do |kitty|%>
+  <li>Name: <%=kitty.name%>
+    <a href="<%= cat_url(kitty) %>">Check out the cat!</a>
+  </li>
+  <% end %>
+  <br>
+</ul>
