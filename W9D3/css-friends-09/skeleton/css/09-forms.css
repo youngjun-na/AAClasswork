@@ -1,0 +1,21 @@
+/* PHASE 9: Forms */
+.post {
+  background-color: rgb(230, 230, 230);
+  margin-left: 15px;
+  border: 1px solid rgb(129, 129, 129);
+  padding: 5px;
+  width: 500px;
+}
+.input{
+  display: block;
+  background-color: white;
+  width: 400px;
+  font-weight: 500;
+  margin-top: 20px;}
+}
+
+.title {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 30px;
+  margin-top: 20px;}
