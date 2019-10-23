@@ -1,0 +1,128 @@
+body {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 50px;
+  background: lightgrey;
+  color: darkgrey;
+  /* text-align: center; */
+}
+
+.clock {
+  background: lightblue;
+  display: flex;
+  width: 700px;
+  border: 3px solid grey;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.tabs-list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+/* .tabs {
+  background: lightblue;
+  display: flex;
+  width: 500px;
+  border: 3px solid grey;
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 25px;
+  margin: 0 auto;
+  padding-bottom: 30px; 
+  justify-content: center;
+  text-align: right;
+} */
+.tab-container {
+  /* display: flex; */
+  margin: 0 auto;
+  width: 376px;
+}
+
+.title {
+  font-size: 70px;
+  text-align: center;
+  padding: 10px;
+}
+
+.tab-button {
+  font-size: 25px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  padding: 5px 10px;
+  border: 2px gray solid;
+  min-width: 70px;
+  text-align: center;
+  background: lightyellow;
+}
+
+.tab-button:hover {
+	transition: 0.25s ease;
+  background: lightgray;
+  color: lightyellow;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.content-box {
+  font-size: 35px;
+  margin-top: 0;
+  display: block;
+  width: 362px;
+  border: 2px gray solid;
+  border-top: 0;
+  text-align: center;
+  padding: 5px;
+  background: blanchedalmond;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.selected {
+  border-bottom: 2px blanchedalmond solid;
+  background: blanchedalmond;
+}
+
+.selected:hover {
+  border-bottom: 2px blanchedalmond solid;
+  background: blanchedalmond;
+  color: grey
+}
+
+/* #world {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #111;
+} */
+
+/* html,
+body {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  background: #fff;
+} */
+
+/* #canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+} */
