@@ -1,0 +1,89 @@
+
+.board-cont {
+  margin: 0 auto;
+  margin-top: 30px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.board-row {
+  display: flex;
+  margin: 0;
+}
+.game {
+  margin-top: 15px;
+  margin-left: 530px;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  /* transform: scale(1.5); */
+}
+.tile {
+  margin: 0;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid gray;
+}
+
+
+
+  .modal {
+    display: none;
+  }
+
+  .modal.is-active {
+    display: block;
+  }
+
+  .modal-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-content {
+    position: absolute;
+    z-index: 1000;
+
+    top: 50%;
+    left: 50%;
+
+    width: 200px;
+    padding: 25px;
+
+    margin-left: -150px;
+    transform: translateY(-50%);
+
+    background: white;
+    border-radius: 5px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .modal-close:hover {
+    color: black;
+  }
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.difficulty {
+  width: 500px;
+  margin-left: 400px;
+}
+
+.hey {
+  text-align: center;
+}
