@@ -20,6 +20,6 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.12"
   }
 }
